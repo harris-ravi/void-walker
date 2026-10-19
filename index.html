@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#090510">
+
+    <title>Void Walker Universe | Official Story Website</title>
+
+    <meta name="description"
+        content="Enter the Void Walker Universe — discover Harris, Harlina, legendary characters, cosmic powers, and an original story of strength, darkness, and hope.">
+    <link rel="stylesheet" href="profile.css">
+    <link rel="icon" type="image/png" href="images/SYM.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- NAVIGATION -->
+    <nav class="navbar">
+        <a class="logo vw-home-logo" href="index.html">
+            <img src="images/logo.png" alt="Void Walker emblem">
+            <span>VOID WALKER</span>
+        </a>
+
+        <ul class="nav-links">
+            <li><a href="index.html" aria-current="page">Home</a></li>
+            <li><a href="story.html">Story</a></li>
+            <li><a href="character.html">Characters</a></li>
+            <li><a href="about.html">About</a></li>
+
+            <li>
+                <a href="LOGIN.html" class="login-btn">Login / Register</a>
+            </li>
+            <li class="vw-account-item">
+                <div class="vw-account" id="vwAccount">
+
+                    <a href="LOGIN.html" id="vwLoginLink" class="hidden">
+                        Login
+                    </a>
+
+                    <button class="vw-profile-button hidden" id="vwProfileButton" type="button" aria-expanded="false"
+                        aria-controls="vwProfileMenu">
+
+                        <span class="vw-avatar" id="vwNavAvatar">✦</span>
+                        <span class="vw-profile-name" id="vwNavName">Walker</span>
+                        <span aria-hidden="true">⌄</span>
+                    </button>
+
+                    <div class="vw-profile-menu hidden" id="vwProfileMenu">
+                        <p class="vw-menu-heading">Your Void Walker Profile</p>
+                        <p id="vwProfileEmail" class="vw-profile-email"></p>
+
+                        <p class="vw-menu-label">Choose your avatar</p>
+
+                        <div class="vw-avatar-grid" id="vwAvatarGrid">
+                            <button type="button" data-avatar="void" title="Void">✦</button>
+                            <button type="button" data-avatar="harris" title="Harris">♜</button>
+                            <button type="button" data-avatar="harlina" title="Harlina">❄</button>
+                            <button type="button" data-avatar="zero" title="Zero">✧</button>
+                            <button type="button" data-avatar="shadow" title="Shadow">◈</button>
+                            <button type="button" data-avatar="galaxy" title="Galaxy">✺</button>
+                        </div>
+
+                        <p id="vwProfileMessage" role="status"></p>
+
+                        <button type="button" id="vwLogoutButton">
+                            Log out
+                        </button>
+                    </div>
+
+                </div>
+            </li>
+        </ul>
+
+    </nav>
+
+    <main class="vw-home">
+
+        <!-- HERO: THE FIRST IMPRESSION -->
+        <header class="vw-hero">
+
+            <div class="vw-hero-content">
+
+                <p class="vw-eyebrow">
+                    AN ORIGINAL FICTIONAL UNIVERSE BY R. HARRIS RAVI
+                </p>
+
+                <h1>
+                    ENTER THE
+                    <span>VOID WALKER</span>
+                    UNIVERSE
+                </h1>
+
+                <p class="vw-hero-quote">
+                    "Darkness is not evil… it is power waiting to be controlled."
+                </p>
+
+                <p class="vw-hero-description">
+                    Enter a universe of extraordinary powers, mysterious
+                    dimensions, legendary warriors, emotional battles,
+                    friendship, sacrifice, and the courage to overcome
+                    inner darkness.
+                </p>
+
+                <div class="vw-hero-actions">
+                    <a href="story.html" class="vw-btn vw-btn-primary">
+                        EXPLORE THE STORY ↗
+                    </a>
+
+                    <a href="character.html" class="vw-btn vw-btn-outline">
+                        DISCOVER CHARACTERS
+                    </a>
+                </div>
+
+                <p class="vw-hero-note">
+                    YOUR JOURNEY INTO THE VOID BEGINS HERE.
+                </p>
+
+            </div>
+
+            <div class="vw-hero-art">
+                <img src="images/title2.png" alt="Void Walker Universe artwork" fetchpriority="high">
+            </div>
+
+            <div class="vw-hero-glow"></div>
+
+        </header>
+
+        <!-- ANNOUNCEMENT STRIP -->
+        <section class="vw-announcement" aria-label="Website announcement">
+            <span class="vw-announcement-symbol">✦</span>
+
+            <p>
+                WELCOME TO THE VOID WALKER UNIVERSE
+                <span>— EXPLORE THE STORY. MEET THE LEGENDS. DISCOVER THE VOID.</span>
+            </p>
+        </section>
+
+        <!-- INTRODUCTION -->
+        <section class="vw-section vw-intro" id="universe">
+
+            <div class="vw-section-heading">
+                <p class="vw-eyebrow">BEYOND THE KNOWN EXISTENCE</p>
+                <h2>A Universe Without <span>Ordinary Limits</span></h2>
+                <p>
+                    Every world has a history. Every power has a cost.
+                    Every legend has a beginning.
+                </p>
+            </div>
+
+            <div class="vw-intro-grid">
+
+                <article class="vw-info-card">
+                    <span class="vw-card-number">01</span>
+                    <div class="vw-info-icon">◈</div>
+                    <h3>A Story of Strength</h3>
+                    <p>
+                        Follow a journey shaped by loneliness, difficult
+                        choices, powerful emotions, personal growth,
+                        and the determination to keep moving forward.
+                    </p>
+                </article>
+
+                <article class="vw-info-card">
+                    <span class="vw-card-number">02</span>
+                    <div class="vw-info-icon">✧</div>
+                    <h3>Extraordinary Powers</h3>
+                    <p>
+                        Discover unique abilities, evolving forms,
+                        mysterious eyes, legendary weapons, and
+                        battles across an expanding fictional universe.
+                    </p>
+                </article>
+
+                <article class="vw-info-card">
+                    <span class="vw-card-number">03</span>
+                    <div class="vw-info-icon">♛</div>
+                    <h3>Connections That Matter</h3>
+                    <p>
+                        Explore friendship, loyalty, family, rivalry,
+                        sacrifice, and the bonds that can change
+                        the destiny of entire worlds.
+                    </p>
+                </article>
+
+            </div>
+
+        </section>
+
+        <!-- MAIN STORY ADVERTISEMENT -->
+        <section class="vw-feature">
+
+            <div class="vw-feature-art">
+                <img src="images/SEASON1.png" alt="Void Walker Season 1 cover artwork" loading="lazy">
+                <span class="vw-art-caption">THE BEGINNING OF THE WALKER</span>
+            </div>
+
+            <div class="vw-feature-content">
+
+                <p class="vw-eyebrow">THE JOURNEY BEGINS</p>
+
+                <h2>Every Legend Has a <span>Beginning.</span></h2>
+
+                <p>
+                    Discover the story of Harris and the events that
+                    shape his journey into the Void Walker Universe.
+                    Explore the origins, the characters, the challenges,
+                    and the mysteries that lie ahead.
+                </p>
+
+                <p>
+                    Start from the beginning and follow the story
+                    through the seasons available on this website.
+                </p>
+
+                <a href="story.html" class="vw-btn vw-btn-primary">
+                    ENTER THE STORY →
+                </a>
+
+                <p class="vw-small-note">
+                    Story access depends on the chapters and PDF files
+                    published on the Story page.
+                </p>
+
+            </div>
+
+        </section>
+
+        <!-- SEASON PREVIEW -->
+        <section class="vw-section">
+
+            <div class="vw-section-heading">
+                <p class="vw-eyebrow">THE STORY ARCHIVE</p>
+                <h2>Explore the <span>Seasons</span></h2>
+                <p>
+                    Begin at the origin and discover the story releases
+                    available in the Void Walker archive.
+                </p>
+            </div>
+
+            <div class="vw-season-grid">
+
+                <article class="vw-season-card">
+                    <img src="images/SEASON1.png" alt="Season 1 cover" loading="lazy">
+                    <div class="vw-season-info">
+                        <span>SEASON 01</span>
+                        <h3>The Beginning</h3>
+                        <p>Discover the opening chapter of the journey.</p>
+                        <a href="story.html">Explore story →</a>
+                    </div>
+                </article>
+
+                <article class="vw-season-card">
+                    <img src="images/SEASON2.png" alt="Season 2 cover" loading="lazy">
+                    <div class="vw-season-info">
+                        <span>SEASON 02</span>
+                        <h3>The Next Chapter</h3>
+                        <p>Continue into the next part of the saga.</p>
+                        <a href="story.html">Explore story →</a>
+                    </div>
+                </article>
+
+                <article class="vw-season-card">
+                    <img src="images/SEASON3.png" alt="Season 3 cover" loading="lazy">
+                    <div class="vw-season-info">
+                        <span>SEASON 03</span>
+                        <h3>The Universe Expands</h3>
+                        <p>Continue exploring the published story.</p>
+                        <a href="story.html">Explore story →</a>
+                    </div>
+                </article>
+
+            </div>
+
+            <div class="vw-centered-action">
+                <a href="story.html" class="vw-btn vw-btn-outline">
+                    VIEW ALL AVAILABLE SEASONS →
+                </a>
+            </div>
+
+        </section>
+
+        <!-- FEATURED CHARACTERS -->
+        <section class="vw-section vw-character-section">
+
+            <div class="vw-section-heading">
+                <p class="vw-eyebrow">THE PEOPLE BEHIND THE LEGENDS</p>
+                <h2>Meet the <span>Characters</span></h2>
+                <p>
+                    Every character has a story, a personality,
+                    strengths, weaknesses, and a place in the universe.
+                </p>
+            </div>
+
+            <div class="vw-featured-characters">
+
+                <article class="vw-character-card">
+                    <div class="vw-character-image">
+                        <img src="images/harris.png" alt="Harris — the Void Walker" loading="lazy">
+                    </div>
+                    <div class="vw-character-content">
+                        <span>THE VOID WALKER</span>
+                        <h3>HARRIS</h3>
+                        <p>
+                            A central figure in the universe whose
+                            journey explores inner darkness, strength,
+                            and the responsibility of power.
+                        </p>
+                    </div>
+                </article>
+
+                <article class="vw-character-card">
+                    <div class="vw-character-image">
+                        <img src="images/harlina.png" alt="Harlina — the Void Queen" loading="lazy">
+                    </div>
+                    <div class="vw-character-content">
+                        <span>THE VOID QUEEN</span>
+                        <h3>HARLINA</h3>
+                        <p>
+                            A key figure associated with emotional
+                            strength, light within darkness, and the
+                            bonds that shape the story.
+                        </p>
+                    </div>
+                </article>
+
+            </div>
+
+            <div class="vw-centered-action">
+                <a href="character.html" class="vw-btn vw-btn-primary">
+                    DISCOVER ALL CHARACTERS →
+                </a>
+            </div>
+
+        </section>
+
+        <!-- UNIVERSE FEATURES -->
+        <section class="vw-section">
+
+            <div class="vw-section-heading">
+                <p class="vw-eyebrow">MORE THAN A SINGLE STORY</p>
+                <h2>Explore Every Corner of the <span>Void</span></h2>
+            </div>
+
+            <div class="vw-universe-grid">
+
+                <a href="story.html" class="vw-universe-card">
+                    <span>01 / ARCHIVE</span>
+                    <h3>Story Library</h3>
+                    <p>
+                        Read available story chapters and access
+                        published PDF editions.
+                    </p>
+                    <strong>OPEN LIBRARY ↗</strong>
+                </a>
+
+                <a href="character.html" class="vw-universe-card">
+                    <span>02 / PROFILES</span>
+                    <h3>Character Database</h3>
+                    <p>
+                        Discover character backgrounds, powers,
+                        abilities, personalities, and attitudes.
+                    </p>
+                    <strong>MEET THE LEGENDS ↗</strong>
+                </a>
+
+                <a href="about.html" class="vw-universe-card">
+                    <span>03 / ORIGINS</span>
+                    <h3>Behind the Universe</h3>
+                    <p>
+                        Learn about the creator, the creative vision,
+                        and the ideas behind the project.
+                    </p>
+                    <strong>ABOUT THE CREATOR ↗</strong>
+                </a>
+
+            </div>
+
+        </section>
+
+        <!-- CREATOR'S MESSAGE -->
+        <section class="vw-message">
+
+            <p class="vw-eyebrow">A MESSAGE FROM THE CREATOR</p>
+
+            <h2>More Than Power.<br><span>A Story With a Heart.</span></h2>
+
+            <p>
+                Void Walker is an original creative project built
+                through imagination, storytelling, and a passion
+                for learning and developing new skills.
+            </p>
+
+            <p>
+                The vision is to keep expanding this universe,
+                introduce more characters, develop new story arcs,
+                and build a website where readers can explore
+                the world as it grows.
+            </p>
+
+            <p class="vw-message-signature">
+                — R. Harris Ravi
+            </p>
+
+            <a href="about.html" class="vw-btn vw-btn-primary">
+                READ ABOUT VOID WALKER →
+            </a>
+
+        </section>
+
+        <!-- FINAL CALL TO ACTION -->
+        <section class="vw-final-cta">
+
+            <p class="vw-eyebrow">YOUR NEXT ADVENTURE AWAITS</p>
+
+            <h2>Are You Ready to Enter the <span>Void?</span></h2>
+
+            <p>
+                Begin the story. Discover the characters.
+                Explore a universe built from imagination.
+            </p>
+
+            <div class="vw-hero-actions">
+                <a href="story.html" class="vw-btn vw-btn-primary">
+                    START EXPLORING
+                </a>
+
+                <a href="LOGIN.html" class="vw-btn vw-btn-outline">
+                    JOIN THE COMMUNITY
+                </a>
+            </div>
+
+            <p class="vw-small-note">
+                Account registration and community features require
+                a working authentication system.
+            </p>
+
+        </section>
+
+        <!-- FOOTER -->
+        <footer class="vw-footer">
+
+            <img src="images/logo.png" alt="Void Walker logo" loading="lazy">
+
+            <h2>VOID WALKER UNIVERSE</h2>
+
+            <p>Victory Over Inner Darkness.</p>
+
+            <div class="vw-footer-links">
+                <a href="index.html">Home</a>
+                <a href="story.html">Story</a>
+                <a href="character.html">Characters</a>
+                <a href="about.html">About</a>
+                <a href="LOGIN.html">Login / Register</a>
+            </div>
+
+            <p class="vw-footer-copy">
+                © <span id="vw-current-year"></span>
+                Void Walker Universe · Created by R. Harris Ravi
+            </p>
+
+        </footer>
+
+    </main>
+
+    <script>
+        document.getElementById("vw-current-year").textContent =
+            new Date().getFullYear();
+    </script>
+
+    <script src="script.js"></script>
+    <script src="profile.js"></script>
+</body>
+
+</html>

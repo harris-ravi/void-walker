@@ -1,0 +1,270 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Void Walker | Story Archive</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="logo">
+            <img src="images/logo.png" alt="Void Walker Logo">
+            VOID WALKER
+        </div>
+
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="story.html" class="current">Story</a></li>
+            <li><a href="character.html">Characters</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="LOGIN.html" class="login-btn">Login / Register</a></li>
+        </ul>
+    </nav>
+
+    <main class="story-page">
+
+        <section class="story-intro">
+            <p class="eyebrow">THE OFFICIAL STORY ARCHIVE</p>
+            <h1>THE VOID WALKER <span>CHRONICLES</span></h1>
+            <p>
+                Enter the universe of Harris and Harlina.
+                Discover their journey, their powers, and the secrets of the Void.
+            </p>
+            <div class="intro-line"></div>
+        </section>
+
+        <section class="featured-season" aria-label="Season viewer">
+
+            <button class="season-arrow" id="previousSeason"
+                type="button" aria-label="Previous season">
+                &#10094;
+            </button>
+
+            <div class="season-content" id="seasonContent">
+
+                <div class="season-poster">
+                    <img id="seasonImage"
+                         src="images/SEASON1.png"
+                         alt="Void Walker Season 1 poster">
+                    <span class="poster-label">VOID ARCHIVE</span>
+                </div>
+
+                <div class="season-info">
+                    <p class="season-number" id="seasonNumber">
+                        SEASON 01
+                    </p>
+
+                    <h2 id="seasonTitle">The Beginning of the Walker</h2>
+
+                    <div class="title-line"></div>
+
+                    <p class="season-description" id="seasonDescription">
+                        Every legend begins somewhere. Discover the
+                        beginning of Harris and the world of the Void.
+                    </p>
+
+                    <div class="season-details">
+                        <span>✦ Original Story</span>
+                        <span>✦ Void Walker Universe</span>
+                    </div>
+
+                    <a id="readStory"
+                       class="read-button"
+                       href="pdf/SEASON1.pdf"
+                       target="_blank"
+                       rel="noopener">
+                        READ THIS SEASON <span>→</span>
+                    </a>
+
+                    <a id="downloadStory"
+                       class="download-button"
+                       href="pdf/SEASON1.pdf"
+                       download>
+                        ↓ Download PDF
+                    </a>
+
+                    <p class="season-counter" id="seasonCounter">
+                        01 / 08
+                    </p>
+                </div>
+
+            </div>
+
+            <button class="season-arrow" id="nextSeason"
+                type="button" aria-label="Next season">
+                &#10095;
+            </button>
+
+        </section>
+
+        <section class="season-selector">
+            <div class="selector-heading">
+                <div>
+                    <p class="eyebrow">CHOOSE YOUR DESTINY</p>
+                    <h2>Explore the Seasons</h2>
+                </div>
+                <p>Select a season to begin reading.</p>
+            </div>
+
+            <div class="season-dots" id="seasonDots"
+                aria-label="Choose a season"></div>
+        </section>
+
+        <footer class="story-footer">
+            <p>VOID WALKER UNIVERSE</p>
+            <span>HARRIS • HARLINA • THE JOURNEY CONTINUES</span>
+        </footer>
+
+    </main>
+
+    <script>
+        const seasons = [
+            {
+                title: "The Beginning of the Walker",
+                image: "images/SEASON1.png",
+                pdf: "pdf/SEASON1.pdf",
+                description:
+                    "Every legend begins somewhere. Discover the beginning of Harris and the world of the Void."
+            },
+            {
+                title: "Infinite Destruction",
+                image: "images/SEASON2.png",
+                pdf: "pdf/SEASON2.pdf",
+                description:
+                    "A new chapter unfolds as the forces of the Void challenge the fate of the universe."
+            },
+            {
+                title: "Season 3",
+                image: "images/SEASON3.png",
+                pdf: "pdf/SEASON3.pdf",
+                description:
+                    "Continue the Void Walker journey and discover what awaits Harris and his allies."
+            },
+            {
+                title: "Season 4",
+                image: "images/SEASON 4.png",
+                pdf: "pdf/SEASON4.pdf",
+                description:
+                    "Enter the next part of the Void Walker saga."
+            },
+            {
+                title: "Season 5",
+                image: "images/SEASON5.png",
+                pdf: "pdf/SEASON5.pdf",
+                description:
+                    "The journey continues. Explore another chapter of the Void Walker universe."
+            },
+            {
+                title: "Season 6",
+                image: "images/SEASON6.png",
+                pdf: "pdf/SEASON6.pdf",
+                description:
+                    "Discover the next stage of Harris and Harlina's story."
+            },
+            {
+                title: "End of Crimson Eclipse",
+                image: "images/SEASON1.png",
+                pdf: "pdf/END OF CRIMSON ECLIPSE.pdf",
+                description:
+                    "Explore the Crimson Eclipse story in the Void Walker universe."
+            },
+            {
+                title: "Season 7",
+                image: "images/SEASON1.png",
+                pdf: "pdf/SEASON7.pdf",
+                description:
+                    "Continue reading the adventures of Harris, Harlina, and their world."
+            },
+            {
+                title: "Season 8",
+                image: "images/SEASON1.png",
+                pdf: "pdf/SEASON8.pdf",
+                description:
+                    "The next part of the Void Walker story awaits."
+            }
+        ];
+
+        let currentSeason = 0;
+
+        const seasonImage = document.getElementById("seasonImage");
+        const seasonTitle = document.getElementById("seasonTitle");
+        const seasonNumber = document.getElementById("seasonNumber");
+        const seasonDescription = document.getElementById("seasonDescription");
+        const seasonCounter = document.getElementById("seasonCounter");
+        const readStory = document.getElementById("readStory");
+        const downloadStory = document.getElementById("downloadStory");
+        const seasonDots = document.getElementById("seasonDots");
+
+        function displaySeason(index) {
+            currentSeason = (index + seasons.length) % seasons.length;
+
+            const season = seasons[currentSeason];
+            const number = String(currentSeason + 1).padStart(2, "0");
+            const total = String(seasons.length).padStart(2, "0");
+
+            seasonImage.style.opacity = "0";
+
+            window.setTimeout(() => {
+                seasonImage.src = season.image;
+                seasonImage.alt = season.title + " poster";
+                seasonTitle.textContent = season.title;
+                seasonNumber.textContent = "SEASON " + number;
+                seasonDescription.textContent = season.description;
+                seasonCounter.textContent = number + " / " + total;
+                readStory.href = season.pdf;
+                downloadStory.href = season.pdf;
+
+                seasonImage.onload = () => {
+                    seasonImage.style.opacity = "1";
+                };
+
+                // Prevent an invisible image if a cached image loads immediately.
+                if (seasonImage.complete && seasonImage.naturalWidth > 0) {
+                    seasonImage.style.opacity = "1";
+                }
+            }, 120);
+
+            document.querySelectorAll(".season-dot").forEach((dot, i) => {
+                dot.classList.toggle("active", i === currentSeason);
+                dot.setAttribute("aria-pressed", String(i === currentSeason));
+            });
+        }
+
+        seasons.forEach((season, index) => {
+            const button = document.createElement("button");
+            button.type = "button";
+            button.className = "season-dot";
+            button.textContent = String(index + 1).padStart(2, "0");
+            button.setAttribute("aria-label", "View " + season.title);
+            button.setAttribute("aria-pressed", "false");
+            button.addEventListener("click", () => displaySeason(index));
+            seasonDots.appendChild(button);
+        });
+
+        document.getElementById("previousSeason").addEventListener(
+            "click", () => displaySeason(currentSeason - 1)
+        );
+
+        document.getElementById("nextSeason").addEventListener(
+            "click", () => displaySeason(currentSeason + 1)
+        );
+
+        document.addEventListener("keydown", event => {
+            if (event.key === "ArrowLeft") {
+                displaySeason(currentSeason - 1);
+            }
+
+            if (event.key === "ArrowRight") {
+                displaySeason(currentSeason + 1);
+            }
+        });
+
+        displaySeason(0);
+    </script>
+
+</body>
+</html>

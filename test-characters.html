@@ -1,0 +1,83 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Void Walker Characters</title>
+    <style>
+        body {
+            background: #10091c;
+            color: white;
+            font-family: Arial, sans-serif;
+            padding: 30px;
+        }
+
+        h1 {
+            color: #b99aff;
+        }
+
+        .character {
+            background: #211532;
+            border: 1px solid #8156bd;
+            border-radius: 12px;
+            padding: 16px;
+            margin: 12px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Void Walker Universe</h1>
+    <h2>Characters</h2>
+
+    <div id="characters">Loading characters...</div>
+
+    <script>
+        async function loadCharacters() {
+            const container = document.getElementById("characters");
+
+            try {
+                const response = await fetch(
+                    "http://localhost:5000/api/characters"
+                );
+
+                if (!response.ok) {
+                    throw new Error("Could not load characters");
+                }
+
+                const characters = await response.json();
+
+                if (characters.length === 0) {
+                    container.textContent = "No characters found yet.";
+                    return;
+                }
+
+                container.replaceChildren();
+
+                characters.forEach(character => {
+                    const card = document.createElement("div");
+                    card.className = "character";
+
+                    const name = document.createElement("h3");
+                    name.textContent = character.name;
+
+                    const role = document.createElement("p");
+                    role.textContent = "Role: " + character.role;
+
+                    const power = document.createElement("p");
+                    power.textContent = "Power: " + character.power;
+
+                    card.append(name, role, power);
+                    container.appendChild(card);
+                });
+            } catch (error) {
+                container.textContent =
+                    "Unable to load characters. Check that the backend is running.";
+                console.error(error);
+            }
+        }
+
+        loadCharacters();
+    </script>
+</body>
+</html>

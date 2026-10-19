@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#0a0610">
+    <title>Characters | Void Walker Universe</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="logo">
+            <img src="images/logo.png" alt="Void Walker Logo">
+            VOID WALKER
+        </div>
+
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="story.html">Story</a></li>
+            <li><a href="character.html" aria-current="page">Characters</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="LOGIN.html" class="login-btn">Login / Register</a></li>
+        </ul>
+    </nav>
+
+    <main class="character-page">
+
+        <header class="character-hero">
+            <p class="character-eyebrow">THE PEOPLE BEHIND THE LEGEND</p>
+            <h1>VOID WALKER <span>CHARACTERS</span></h1>
+            <p>
+                Meet the warriors, guardians, and legends who shape the
+                Void Walker Universe. Discover their powers, personalities,
+                abilities, and hidden strengths.
+            </p>
+            <div class="character-divider"></div>
+        </header>
+
+        <section class="character-library">
+
+            <div class="character-toolbar">
+                <div>
+                    <p class="character-eyebrow">UNIVERSE DATABASE</p>
+                    <h2>Character Archive</h2>
+                    <p class="archive-count">
+                        Characters discovered:
+                        <strong id="characterCount">14</strong>
+                    </p>
+                </div>
+
+                <input
+                    type="search"
+                    id="characterSearch"
+                    placeholder="Search characters..."
+                    aria-label="Search characters">
+            </div>
+
+            <div class="character-grid" id="characterGrid">
+
+                <article class="character-card">
+                    <img src="CHARACTERS/BASE.png" alt="Harris" loading="lazy">
+                    <div class="character-card-content">
+                        <span class="character-role">THE VOID WALKER</span>
+                        <h3>HARRIS</h3>
+                        <p>Born from loneliness. A warrior who turns inner darkness into strength.</p>
+                        <button type="button" onclick="openCharacter('Harris')">Explore Profile ↗</button>
+                    </div>
+                </article>
+
+                <article class="character-card">
+                    <img src="CHARACTERS/HARLINA QLI.png" alt="Harlina" loading="lazy">
+                    <div class="character-card-content">
+                        <span class="character-role">THE VOID QUEEN</span>
+                        <h3>HARLINA</h3>
+                        <p>A symbol of emotional strength, silver light, and the courage to stand beside others.</p>
+                        <button type="button" onclick="openCharacter('Harlina')">Explore Profile ↗</button>
+                    </div>
+                </article>
+
+                <article class="character-card">
+                    <img src="CHARACTERS/KOJIM.png" alt="Koji" loading="lazy">
+                    <div class="character-card-content">
+                        <span class="character-role">THE MASTER</span>
+                        <h3>KOJI</h3>
+                        <p>A guardian and mentor whose wisdom helps guide the next generation.</p>
+                        <button type="button" onclick="openCharacter('Koji')">Explore Profile ↗</button>
+                    </div>
+                </article>
+
+                <article class="character-card">
+                    <img src="CHARACTERS/LUNAR M.png" alt="Lunar" loading="lazy">
+                    <div class="character-card-content">
+                        <span class="character-role">THE TIMELINE WATCHER</span>
+                        <h3>LUNAR</h3>
+                        <p>A watcher of Void Space who understands hidden timelines.</p>
+                        <button type="button" onclick="openCharacter('Lunar')">Explore Profile ↗</button>
+                    </div>
+                </article>
+
+                <article class="character-card">
+                    <img src="CHARACTERS/LINA.png" alt="Lina" loading="lazy">
+                    <div class="character-card-content">
+                        <span class="character-role">THE GUARDIAN</span>
+                        <h3>LINA</h3>
+                        <p>A guardian associated with truth, strategy, and difficult decisions.</p>
+                        <button type="button" onclick="openCharacter('Lina')">Explore Profile ↗</button>
+                    </div>
+                </article>
+
+                <article class="character-card">
+                    <img src="CHARACTERS/AETHER.png" alt="Aether" loading="lazy">
+                    <div class="character-card-content">
+                        <span class="character-role">GUARDIAN OF INFINITY</span>
+                        <h3>AETHER</h3>
+                        <p>A guardian of infinity space who decides who may approach.</p>
+                        <button type="button" onclick="openCharacter('Aether')">Explore Profile ↗</button>
+                    </div>
+                </article>
+
+                <article class="character-card">
+                    <img src="CHARACTERS/CHRONA.png" alt="Chrona" loading="lazy">
+                    <div class="character-card-content">
+                        <span class="character-role">GUARDIAN OF TIME</span>
+                        <h3>CHRONA</h3>
+                        <p>A focused guardian who values time and commands temporal power.</p>
+                        <button type="button" onclick="openCharacter('Chrona')">Explore Profile ↗</button>
+                    </div>
+                </article>
+
+                <article class="character-card">
+                    <img src="CHARACTERS/GAIA.png" alt="Gaia" loading="lazy">
+                    <div class="character-card-content">
+                        <span class="character-role">GUARDIAN OF GRAVITY</span>
+                        <h3>GAIA</h3>
+                        <p>A powerful guardian who controls gravity and the pressure of existence.</p>
+                        <button type="button" onclick="openCharacter('Gaia')">Explore Profile ↗</button>
+                    </div>
+                </article>
+
+                <article class="character-card">
+                    <img src="CHARACTERS/HARINA.png" alt="Harina" loading="lazy">
+                    <div class="character-card-content">
+                        <span class="character-role">VOID INSTINCT</span>
+                        <h3>HARINA</h3>
+                        <p>A character connected to the Void Instinct fragment.</p>
+                        <button type="button" onclick="openCharacter('Harina')">Explore Profile ↗</button>
+                    </div>
+                </article>
+
+                <article class="character-card">
+                    <img src="CHARACTERS/HINA.png" alt="Hina" loading="lazy">
+                    <div class="character-card-content">
+                        <span class="character-role">THE SILENT WARRIOR</span>
+                        <h3>HINA</h3>
+                        <p>A silent warrior whose story and true limits remain to be discovered.</p>
+                        <button type="button" onclick="openCharacter('Hina')">Explore Profile ↗</button>
+                    </div>
+                </article>
+
+                <article class="character-card">
+                    <img src="CHARACTERS/HARIXA.png" alt="Harixa" loading="lazy">
+                    <div class="character-card-content">
+                        <span class="character-role">PRINCESS OF THE GALAXY</span>
+                        <h3>HARIXA</h3>
+                        <p>A young princess whose place in the galaxy makes her story important.</p>
+                        <button type="button" onclick="openCharacter('Harixa')">Explore Profile ↗</button>
+                    </div>
+                </article>
+
+                <article class="character-card">
+                    <img src="CHARACTERS/KIRA.png" alt="Kira" loading="lazy">
+                    <div class="character-card-content">
+                        <span class="character-role">PROTECTOR OF THE COPY FRAGMENT</span>
+                        <h3>KIRA</h3>
+                        <p>A protector entrusted with the mysterious Copy Fragment.</p>
+                        <button type="button" onclick="openCharacter('Kira')">Explore Profile ↗</button>
+                    </div>
+                </article>
+
+                <article class="character-card">
+                    <img src="CHARACTERS/MIKA.png" alt="Mika" loading="lazy">
+                    <div class="character-card-content">
+                        <span class="character-role">VOID WALKER ALLY</span>
+                        <h3>MIKA</h3>
+                        <p>Discover Mika's place in the Void Walker universe.</p>
+                        <button type="button" onclick="openCharacter('Mika')">Explore Profile ↗</button>
+                    </div>
+                </article>
+
+                <!-- ADD NEW CHARACTER CARDS HERE -->
+
+            </div>
+
+            <p id="noCharacters" class="no-characters" hidden>
+                No characters found. Try another name.
+            </p>
+
+        </section>
+
+        <footer class="character-footer">
+            <h2>THE VOID WALKER UNIVERSE</h2>
+            <p>Every character has a story. Every power has a price.</p>
+        </footer>
+
+    </main>
+
+    <!-- Character details popup -->
+    <div class="character-modal" id="characterModal"
+         role="dialog" aria-modal="true"
+         aria-labelledby="modalName" hidden>
+
+        <div class="character-modal-panel">
+            <button type="button" class="modal-close"
+                    onclick="closeCharacter()"
+                    aria-label="Close profile">✕</button>
+
+            <div class="modal-heading">
+                <img id="modalImage" src="" alt="">
+                <div>
+                    <p class="character-eyebrow" id="modalRole"></p>
+                    <h2 id="modalName"></h2>
+                    <p id="modalSummary"></p>
+                </div>
+            </div>
+
+            <div class="profile-details">
+                <section>
+                    <h3>✦ Powers</h3>
+                    <p id="modalPowers"></p>
+                </section>
+                <section>
+                    <h3>⚔ Abilities</h3>
+                    <p id="modalAbilities"></p>
+                </section>
+                <section>
+                    <h3>◈ Personality</h3>
+                    <p id="modalPersonality"></p>
+                </section>
+                <section>
+                    <h3>◆ Attitude</h3>
+                    <p id="modalAttitude"></p>
+                </section>
+                <section>
+                    <h3>⬆ Strengths</h3>
+                    <p id="modalStrengths"></p>
+                </section>
+                <section>
+                    <h3>⬇ Weaknesses</h3>
+                    <p id="modalWeaknesses"></p>
+                </section>
+            </div>
+
+            <p class="profile-note">
+                Character profiles can be edited as the official story develops.
+            </p>
+        </div>
+    </div>
+
+    <script>
+        /*
+         * Character descriptions are editable story data.
+         * Replace proposed details with your official canon when needed.
+         */
+        const characterProfiles = {
+            Harris: {
+                image: "CHARACTERS/BASE.png",
+                role: "THE VOID WALKER",
+                summary: "A warrior who transforms inner darkness into the will to protect others.",
+                powers: "Void energy and inner-darkness transformation. Add confirmed Gen Eye powers, transformations, and Void techniques as established in your story.",
+                abilities: "Powerful combat potential, determination under pressure, and the ability to develop new techniques through training.",
+                personality: "Deep-thinking, determined, protective, and shaped by loneliness. He wants others to avoid the isolation he experienced.",
+                attitude: "Serious toward enemies, loyal to trusted allies, and unwilling to surrender when protecting people he cares about.",
+                strengths: "Determination, courage, adaptability, and a strong protective instinct.",
+                weaknesses: "Emotional burdens and the risk of carrying too much responsibility alone."
+            },
+
+            Harlina: {
+                image: "CHARACTERS/HARLINA QLI.png",
+                role: "THE VOID QUEEN",
+                summary: "A symbol of silver light, emotional resilience, and strength within darkness.",
+                powers: "Silver aura and her own Void identity. Add her confirmed transformations and signature powers here.",
+                abilities: "Supportive combat, composure in difficult moments, and the ability to stand firm when others lose hope.",
+                personality: "Caring, resilient, emotionally perceptive, and courageous.",
+                attitude: "Protective toward loved ones, confident when facing danger, and unwilling to let darkness define a person's worth.",
+                strengths: "Emotional resilience, loyalty, courage, and inner strength.",
+                weaknesses: "Her concern for loved ones can make difficult choices more painful."
+            },
+
+            Koji: {
+                image: "CHARACTERS/KOJIM.png",
+                role: "THE MASTER",
+                summary: "Harris's mentor and a guide through the dangers of the universe.",
+                powers: "His confirmed powers can be added here. His established role is that of a mentor and guardian.",
+                abilities: "Training, strategic planning, guidance, and interpreting dangerous situations.",
+                personality: "Wise, experienced, disciplined, and protective.",
+                attitude: "Patient with learners but serious about responsibility and preparation.",
+                strengths: "Experience, strategic thinking, and mentorship.",
+                weaknesses: "The burden of protecting those who depend on his guidance."
+            },
+
+            Lunar: {
+                image: "CHARACTERS/LUNAR M.png",
+                role: "THE TIMELINE WATCHER",
+                summary: "A watcher of Void Space who knows about hidden timelines.",
+                powers: "Connections to Void Space and knowledge of hidden timelines, as established in the story.",
+                abilities: "Timeline observation, identifying unusual events, and helping others understand larger threats.",
+                personality: "Observant, thoughtful, composed, and mysterious.",
+                attitude: "Careful with information and focused on the consequences of major decisions.",
+                strengths: "Awareness, patience, and understanding of timelines.",
+                weaknesses: "Knowing possible outcomes does not necessarily mean every outcome can be controlled."
+            },
+
+            Lina: {
+                image: "CHARACTERS/LINA.png",
+                role: "THE GUARDIAN",
+                summary: "A guardian associated with truth and strategy.",
+                powers: "Her precise power set is still to be defined.",
+                abilities: "Potential strategic support and investigation, pending confirmation in the story.",
+                personality: "To be defined by her official story scenes.",
+                attitude: "To be defined by her decisions and relationships.",
+                strengths: "Her established guardian role.",
+                weaknesses: "Not yet defined in the supplied character information."
+            },
+
+            Aether: {
+                image: "CHARACTERS/AETHER.png",
+                role: "GUARDIAN OF INFINITY",
+                summary: "A guardian of infinity space who controls access to their domain.",
+                powers: "Infinity-space guardianship, as described in your existing page.",
+                abilities: "Controlling access to infinity space, according to the established description.",
+                personality: "Independent, confident, and protective of their domain.",
+                attitude: "Sets clear boundaries and decides who may approach.",
+                strengths: "Domain control and confidence.",
+                weaknesses: "Specific limits have not yet been established."
+            },
+
+            Chrona: {
+                image: "CHARACTERS/CHRONA.png",
+                role: "GUARDIAN OF TIME",
+                summary: "A guardian associated with time and its careful use.",
+                powers: "Time-related powers, according to your existing character description.",
+                abilities: "Temporal abilities to be specified from the official story.",
+                personality: "Focused, disciplined, and protective of her time.",
+                attitude: "Direct and serious when her responsibilities are at stake.",
+                strengths: "Focus, discipline, and time-related potential.",
+                weaknesses: "Specific limits have not yet been established."
+            },
+
+            Gaia: {
+                image: "CHARACTERS/GAIA.png",
+                role: "GUARDIAN OF GRAVITY",
+                summary: "A guardian who controls gravity and pressure across existence.",
+                powers: "Gravity and pressure control, according to your existing description.",
+                abilities: "Manipulating gravitational force and pressure within the limits established by the story.",
+                personality: "Strong-willed, steady, and focused.",
+                attitude: "Confident when defending her domain.",
+                strengths: "Control over gravity and pressure.",
+                weaknesses: "Exact costs, range, and limitations are yet to be defined."
+            },
+
+            Harina: {
+                image: "CHARACTERS/HARINA.png",
+                role: "VOID INSTINCT",
+                summary: "A character connected to the Void Instinct fragment.",
+                powers: "Void Instinct fragment connection.",
+                abilities: "Specific techniques are to be added from the official story.",
+                personality: "To be defined through her story.",
+                attitude: "To be defined through her choices and relationships.",
+                strengths: "Her connection to the Void Instinct fragment.",
+                weaknesses: "Not yet established."
+            },
+
+            Hina: {
+                image: "CHARACTERS/HINA.png",
+                role: "THE SILENT WARRIOR",
+                summary: "A silent warrior of existence.",
+                powers: "Her specific power set has not yet been supplied.",
+                abilities: "Combat abilities to be detailed from the official story.",
+                personality: "Quiet and reserved, based on her current description.",
+                attitude: "Lets actions speak louder than words.",
+                strengths: "Silence, focus, and the discipline suggested by her role.",
+                weaknesses: "Not yet established."
+            },
+
+            Harixa: {
+                image: "CHARACTERS/HARIXA.png",
+                role: "PRINCESS OF THE GALAXY",
+                summary: "A young princess with an important place in the Void Walker family story.",
+                powers: "Her specific powers are still to be confirmed.",
+                abilities: "To be developed according to her role and age in the story.",
+                personality: "Her personality should reflect her established story and relationships.",
+                attitude: "To be defined through her choices and experiences.",
+                strengths: "Her importance to the story and the relationships she shares.",
+                weaknesses: "Her actual limitations and challenges should be established in the story."
+            },
+
+            Kira: {
+                image: "CHARACTERS/KIRA.png",
+                role: "PROTECTOR OF THE COPY FRAGMENT",
+                summary: "A protector connected to the Copy Fragment.",
+                powers: "Protection of the Copy Fragment.",
+                abilities: "Fragment-related abilities to be specified from the official story.",
+                personality: "Protective, careful, and committed to her duty.",
+                attitude: "Serious about safeguarding what she has been entrusted with.",
+                strengths: "Dedication and her established protective role.",
+                weaknesses: "Specific limits have not yet been established."
+            },
+
+            Mika: {
+                image: "CHARACTERS/MIKA.png",
+                role: "VOID WALKER ALLY",
+                summary: "A member of the wider Void Walker cast.",
+                powers: "To be added when Mika's official power set is confirmed.",
+                abilities: "To be added from the official story.",
+                personality: "To be defined from her scenes and relationships.",
+                attitude: "To be defined from her actions.",
+                strengths: "To be established.",
+                weaknesses: "To be established."
+            }
+        };
+
+        const modal = document.getElementById("characterModal");
+        let previousFocus = null;
+
+        function openCharacter(name) {
+            const character = characterProfiles[name];
+
+            if (!character) {
+                alert("A profile for " + name + " has not been added yet.");
+                return;
+            }
+
+            previousFocus = document.activeElement;
+
+            document.getElementById("modalImage").src = character.image;
+            document.getElementById("modalImage").alt = name;
+            document.getElementById("modalRole").textContent = character.role;
+            document.getElementById("modalName").textContent = name;
+            document.getElementById("modalSummary").textContent = character.summary;
+            document.getElementById("modalPowers").textContent = character.powers;
+            document.getElementById("modalAbilities").textContent = character.abilities;
+            document.getElementById("modalPersonality").textContent = character.personality;
+            document.getElementById("modalAttitude").textContent = character.attitude;
+            document.getElementById("modalStrengths").textContent = character.strengths;
+            document.getElementById("modalWeaknesses").textContent = character.weaknesses;
+
+            modal.hidden = false;
+            document.body.classList.add("modal-open");
+            modal.querySelector(".modal-close").focus();
+        }
+
+        function closeCharacter() {
+            modal.hidden = true;
+            document.body.classList.remove("modal-open");
+
+            if (previousFocus) {
+                previousFocus.focus();
+            }
+        }
+
+        modal.addEventListener("click", event => {
+            if (event.target === modal) {
+                closeCharacter();
+            }
+        });
+
+        document.addEventListener("keydown", event => {
+            if (event.key === "Escape" && !modal.hidden) {
+                closeCharacter();
+            }
+        });
+
+        const searchInput = document.getElementById("characterSearch");
+        const characterCards = [
+            ...document.querySelectorAll(".character-card")
+        ];
+
+        function filterCharacters() {
+            const search = searchInput.value.trim().toLowerCase();
+            let visible = 0;
+
+            characterCards.forEach(card => {
+                const matches = card.textContent.toLowerCase().includes(search);
+                card.hidden = !matches;
+
+                if (matches) visible++;
+            });
+
+            document.getElementById("characterCount").textContent = visible;
+            document.getElementById("noCharacters").hidden = visible !== 0;
+        }
+
+        searchInput.addEventListener("input", filterCharacters);
+
+        // Update this automatically when you add or remove character cards.
+        document.getElementById("characterCount").textContent =
+            characterCards.length;
+    </script>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,243 @@
+
+/* =========================================
+   VOID WALKER — PROFILE SYSTEM
+   Black / Purple Cosmic Theme
+========================================= */
+
+.vw-account,
+.vw-account * {
+    box-sizing: border-box;
+}
+
+.vw-account {
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+    margin-left: 8px;
+    color: #f3eaff;
+    font-family: inherit;
+}
+
+/* Login link shown when logged out */
+.vw-account > a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 16px;
+    color: #f0c7ff;
+    text-decoration: none;
+    white-space: nowrap;
+    font-weight: 700;
+    border: 1px solid #8f42c8;
+    border-radius: 8px;
+    transition: 0.25s ease;
+}
+
+.vw-account > a:hover {
+    color: #ffffff;
+    background: #7025a8;
+    box-shadow: 0 0 16px #b34dff55;
+}
+
+/* Profile dropdown button */
+.vw-account .vw-profile-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    max-width: 190px;
+    padding: 6px 11px;
+    color: #ffffff;
+    background: linear-gradient(135deg, #1b0b27, #321044);
+    border: 1px solid #a855f7;
+    border-radius: 30px;
+    cursor: pointer;
+    font: inherit;
+    transition: 0.25s ease;
+}
+
+.vw-account .vw-profile-button:hover {
+    border-color: #f0abfc;
+    box-shadow: 0 0 16px #a855f766;
+    transform: translateY(-1px);
+}
+
+/* Circular avatar */
+.vw-account .vw-avatar {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    flex: 0 0 36px;
+    color: #ffffff;
+    font-size: 22px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #41166b, #a855f7, #ec8cff);
+    border: 1px solid #e7b5ff;
+    box-shadow: 0 0 12px #a855f744;
+}
+
+.vw-account .vw-profile-name {
+    display: inline-block;
+    max-width: 100px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-weight: 700;
+}
+
+/* Floating profile panel */
+.vw-account .vw-profile-menu {
+    position: absolute;
+    z-index: 9999;
+    top: calc(100% + 12px);
+    right: 0;
+    width: 280px;
+    max-width: calc(100vw - 24px);
+    padding: 20px;
+    color: #f5eaff;
+    background:
+        radial-gradient(ellipse at top right, #39134f 0%, transparent 55%),
+        #100817;
+    border: 1px solid #9148c5;
+    border-radius: 16px;
+    box-shadow:
+        0 15px 45px #000b,
+        0 0 22px #8b35d633;
+    text-align: left;
+    white-space: normal;
+}
+
+/* Dropdown heading */
+.vw-account .vw-menu-heading {
+    margin: 0 0 12px;
+    color: #e7a4ff;
+    font-size: 16px;
+    font-weight: 800;
+}
+
+/* Email address */
+.vw-account .vw-profile-email {
+    margin: 0 0 18px;
+    color: #c7b5d5;
+    font-size: 12px;
+    line-height: 1.6;
+    overflow-wrap: anywhere;
+}
+
+/* Avatar section heading */
+.vw-account .vw-menu-label {
+    margin: 0 0 12px;
+    color: #f1d6ff;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+/* Avatar choices */
+.vw-account .vw-avatar-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 10px;
+}
+
+.vw-account .vw-avatar-grid button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 0;
+    min-height: 54px;
+    color: #f8eaff;
+    font-size: 25px;
+    background: #21112e;
+    border: 1px solid #55346c;
+    border-radius: 11px;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.vw-account .vw-avatar-grid button:hover {
+    background: #482063;
+    border-color: #d79aff;
+    transform: translateY(-2px);
+}
+
+.vw-account .vw-avatar-grid button.selected {
+    background: linear-gradient(135deg, #552079, #8138ac);
+    border-color: #edbdff;
+    box-shadow: 0 0 13px #bc70ff55;
+}
+
+/* Save status */
+.vw-account #vwProfileMessage {
+    min-height: 18px;
+    margin: 12px 0 0;
+    color: #e4b8ff;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+/* Logout */
+.vw-account #vwLogoutButton {
+    display: block;
+    width: 100%;
+    margin-top: 12px;
+    padding: 11px;
+    color: #ffffff;
+    font-weight: 700;
+    background: linear-gradient(135deg, #40134e, #711f69);
+    border: 1px solid #a64fc4;
+    border-radius: 9px;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.vw-account #vwLogoutButton:hover {
+    background: linear-gradient(135deg, #632078, #a02e88);
+    box-shadow: 0 0 14px #bd65ff44;
+}
+
+/* IMPORTANT: hidden elements must stay hidden */
+.vw-account .hidden,
+.vw-account.hidden {
+    display: none !important;
+}
+
+/* Tablet screens */
+@media (max-width: 1000px) {
+    .vw-account {
+        margin-left: 0;
+    }
+
+    .vw-account .vw-profile-name {
+        max-width: 75px;
+    }
+}
+
+/* Mobile screens */
+@media (max-width: 600px) {
+    .vw-account .vw-profile-menu {
+        position: fixed;
+        top: 78px;
+        right: 12px;
+        width: 280px;
+    }
+
+    .vw-account > a {
+        padding: 8px 10px;
+        font-size: 13px;
+    }
+
+    .vw-account .vw-profile-button {
+        gap: 6px;
+        padding: 5px 8px;
+    }
+
+    .vw-account .vw-avatar {
+        width: 32px;
+        height: 32px;
+        flex-basis: 32px;
+        font-size: 19px;
+    }
+}

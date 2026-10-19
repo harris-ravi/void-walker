@@ -1,0 +1,185 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join Void Walker Universe</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            font-family: Arial, sans-serif;
+            color: white;
+            background: radial-gradient(circle at top, #30145c, #080611 65%);
+        }
+
+        .auth-box {
+            width: 100%;
+            max-width: 420px;
+            padding: 32px;
+            border: 1px solid #7543bb;
+            border-radius: 18px;
+            background: rgba(17, 12, 34, 0.95);
+            box-shadow: 0 0 30px #6e26b866;
+        }
+
+        h1 {
+            text-align: center;
+            color: #c5a0ff;
+            margin-top: 0;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: #c5bfd8;
+            margin-bottom: 25px;
+        }
+
+        label {
+            display: block;
+            margin: 15px 0 7px;
+        }
+
+        input {
+            width: 100%;
+            padding: 12px;
+            color: white;
+            background: #100b20;
+            border: 1px solid #65418e;
+            border-radius: 8px;
+            outline: none;
+        }
+
+        input:focus {
+            border-color: #c5a0ff;
+        }
+
+        button {
+            width: 100%;
+            margin-top: 22px;
+            padding: 13px;
+            border: 0;
+            border-radius: 8px;
+            background: #8c43e8;
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        button:disabled {
+            opacity: 0.6;
+            cursor: wait;
+        }
+
+        #message {
+            min-height: 20px;
+            text-align: center;
+            overflow-wrap: anywhere;
+        }
+
+        .link {
+            text-align: center;
+            margin-top: 20px;
+            color: #d1c5e8;
+        }
+
+        a {
+            color: #c5a0ff;
+        }
+    </style>
+</head>
+
+<body>
+    <main class="auth-box">
+        <h1>VOID WALKER</h1>
+        <p class="subtitle">Create your Universe account</p>
+
+        <form id="registerForm">
+            <label for="username">Username</label>
+            <input id="username" name="username"
+                   minlength="3" maxlength="30"
+                   autocomplete="username" required>
+
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email"
+                   autocomplete="email" required>
+
+            <label for="password">Password</label>
+            <input id="password" name="password" type="password"
+                   minlength="8" autocomplete="new-password" required>
+
+            <button id="registerButton" type="submit">
+                Create Account
+            </button>
+        </form>
+
+        <p id="message" role="status" aria-live="polite"></p>
+
+        <p class="link">
+            Already have an account?
+            <a href="LOGIN.html">Login</a>
+        </p>
+    </main>
+
+    <script>
+        const form = document.getElementById("registerForm");
+        const message = document.getElementById("message");
+        const button = document.getElementById("registerButton");
+
+        form.addEventListener("submit", async function (event) {
+            event.preventDefault();
+
+            message.textContent = "";
+            button.disabled = true;
+            button.textContent = "Creating account...";
+
+            try {
+                const response = await fetch(
+                    "http://localhost:5000/api/auth/register",
+                    {
+                        method: "POST",
+                        headers: {
+                            "Content-Type": "application/json"
+                        },
+                        body: JSON.stringify({
+                            username: form.username.value.trim(),
+                            email: form.email.value.trim(),
+                            password: form.password.value
+                        })
+                    }
+                );
+
+                const data = await response.json();
+
+                if (!response.ok) {
+                    throw new Error(data.message || "Registration failed.");
+                }
+
+                message.textContent =
+                    "Account created successfully! You can now log in.";
+
+                form.reset();
+            } catch (error) {
+                message.textContent =
+                    error.message === "Failed to fetch"
+                    ? "Cannot connect to the server. Check that the backend is running."
+                    : error.message;
+            } finally {
+                button.disabled = false;
+                button.textContent = "Create Account";
+            }
+        });
+    </script>
+</body>
+</html>
